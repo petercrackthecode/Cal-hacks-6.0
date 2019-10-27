@@ -95,6 +95,8 @@
 
     event.preventDefault();
 
+    $('#table-analysis').html('<tr><th style="text-align: center; padding-top: 10px;">Candidate</th><th style="text-align: center">Agreement score</th></tr>')
+
     fetch(
       "https://automl.googleapis.com/v1beta1/projects/795970644708/locations/us-central1/models/TCN490914349615939584:predict",
       {
