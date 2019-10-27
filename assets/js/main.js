@@ -1,3 +1,4 @@
+
 (function($) {
 
 	var	$window = $(window),
@@ -24,17 +25,29 @@
 
 		let $analyze= $('#analyze');
 
+		const handleResults = (results) => {
+
+		}
+
 		$('#analyze').on('submit', function(event) {
+			var accessToken = 'ya29.c.Kl6pBzSC_bRj0T0SITGaY_UZNHhh7Z39vQCkx7Z67ZxRdWXciKvk1kgHveqMh53p1MAcvkoOHT_9ZkL5XrZ0spgq3VtGwEfUnv8kqW46fLh8yo2vyHWxOZRitZ9cTAiU';
+
 			event.preventDefault();
-			console.log("We're inside here!");
-			const text = $('#text-area').val();
-			console.log(text);
-			const url = 'http://localhost:3000/submit?data=' + encodeURI(text);
-			console.log(url);
-			$.get(url, function(data, textStatus) {
-				console.log("hello");
-				console.log(data);
-			});
+
+			fetch("https://automl.googleapis.com/v1beta1/projects/795970644708/locations/us-central1/models/TCN490914349615939584:predict", {
+				body: JSON.stringify({
+						payload: { textSnippet: { content: $('#text-area').val(), mime_type: "text/plain" }}
+				}),
+				headers: {
+					Authorization: "Bearer " + accessToken,
+					"Content-Type": "application/json"
+				},
+				method: "POST"
+			}).then(res => res.json()).then(res => {
+				var results = res.payload.map(item => [item.displayName, item.classification.score]).sort((a, b) => a[1] > b[1])
+				console.log(results)
+				handleResults(results)
+			}).catch(err => console.log(err));
 		});
 
 	// Nav.
