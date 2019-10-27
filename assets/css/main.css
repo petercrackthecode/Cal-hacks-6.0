@@ -33,8 +33,22 @@ body {
 	line-height: 1;
 }
 
+body p {
+	text-decoration: none;
+}
+
 #my-btn {
 	margin-top: 20px;
+	min-width: 110px; 
+	min-height: 55px; 
+	margin-left: -10px; 
+	margin-top: 50px;
+}
+
+#my-btn a {
+	text-decoration: none;
+	font-size: 24px;
+	padding: 40px;
 }
 
 ol, ul {
