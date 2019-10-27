@@ -49,16 +49,17 @@
         <!-- Introduction -->
         <section id="intro" class="main">
           <div class="spotlight">
-            <div class="content">
-              <header class="major">
-                <!--<h2>Invisible</h2>-->
-                <textarea></textarea>
-              </header>
-              <p style='font-size: 20px; margin-top: -10px;'>Enter a statement and receive candidates' reaction</p>
-              <ul class="actions">
-                <li><a href="#" class="button" id='analyze'>Start analyzing</a></li>
-              </ul>
-            </div>
+            <form id="analyze">
+              <div class="content">
+                <header class="major">
+                  <textarea id='text-area'></textarea>
+                </header>
+                <p style='font-size: 20px; margin-top: -10px;'>Enter a statement and receive candidates' reaction</p>
+                <ul class="actions">
+                  <li><button type="submit" class="button">Start analyzing</button></li>
+                </ul>
+              </div>
+            </form>
             <img class='image' id='my-img' width='300' height='300' src="images/your candidate, your opinion.png" alt=""/>
           </div>
         </section>

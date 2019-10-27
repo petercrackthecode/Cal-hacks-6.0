@@ -20,6 +20,22 @@
 				$body.removeClass('is-preload');
 			}, 100);
 		});
+		
+
+		let $analyze= $('#analyze');
+
+		$('#analyze').on('submit', function(event) {
+			event.preventDefault();
+			console.log("We're inside here!");
+			const text = $('#text-area').val();
+			console.log(text);
+			const url = 'http://localhost:3000/submit?data=' + encodeURI(text);
+			console.log(url);
+			$.get(url, function(data, textStatus) {
+				console.log("hello");
+				console.log(data);
+			});
+		});
 
 	// Nav.
 		var $nav = $('#nav');
