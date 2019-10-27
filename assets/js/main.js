@@ -49,7 +49,9 @@
     };
 
     const w = 1000;
-    const h = 200;
+	const h = 200;
+	const yScale= 30;
+	const xScale= 50;
     (function() {
       let svg = d3
         .select("strong")
@@ -66,11 +68,11 @@
         .data(readableResults)
         .enter()
         .append("rect")
-        .attr("x", (d, i) => i * 30)
-        .attr("y", (d, i) => h - 3 * d[1])
+        .attr("x", (d, i) => i * xScale)
+        .attr("y", (d, i) => (d[1] > 1) ? h - yScale * d[1] : h - 1)
         .attr("width", 25)
-        .attr("height", (d, i) => d[1] * 3)
-        .attr("fill", getRandomColor());
+        .attr("height", (d, i) => d[1] * 10000)
+        .attr("fill", 'navy');
 
       let rect= svg
         .selectAll("text")
@@ -78,9 +80,9 @@
         .enter()
         .append("text")
         .text(data => data[0])
-        .attr("x", (data, i) => i * 30)
-        .attr("y", (data, i) => h - 3 * data[1] - 3)
-        .attr("font-size", "25px")
+        .attr("x", (data, i) => i * xScale)
+        .attr("y", (data, i) => (data[1] > 1) ? h - yScale * data[1] - 5 : h - 1)
+        .attr("font-size", "10px")
         .attr("color", "navy");
 
 	  console.log("Hi there", rect);
