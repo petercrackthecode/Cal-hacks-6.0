@@ -7,8 +7,53 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
     <noscript>Please allow JavaScript to use this app</noscript>
   </head>
   <body class="is-preload">
@@ -21,12 +66,7 @@
         <p>
           Defeating political illiteracy, one node at a time.<br />
           <button id="my-btn">
-            <a
-              href="#intro"
-              class="scrolly"
-              id='start-btn'
-              >Start now</a
-            >
+            <a href="#intro" class="scrolly" id="start-btn">Start now</a>
           </button>
         </p>
       </header>
@@ -52,10 +92,18 @@
             <form id="analyze">
               <div class="content">
                 <header class="major">
-                  <textarea id='text-area' style='width: 70vw; height: 200px; font-size: 24px;' placeholder="Hey there! Many of you will cast your ballots for the first time in the 2020 Presidential Election. Our engine helps you identify the politicians that are ambassadors for your views, and those who will serve you best if elected."></textarea>
+                  <textarea
+                    id="text-area"
+                    style="width: 70vw; height: 200px; font-size: 24px;"
+                    placeholder="Hey there! Many of you will cast your ballots for the first time in the 2020 Presidential Election. Our engine helps you identify the politicians that are ambassadors for your views, and those who will serve you best if elected."
+                  ></textarea>
                 </header>
-                <ul class="actions" style='display: block;'>
-                  <li style="width: 150px; height: 75px; margin: auto;"><button type="submit" class="button">Start analyzing</button></li>
+                <ul class="actions" style="display: block;">
+                  <li style="width: 150px; height: 75px; margin: auto;">
+                    <button type="submit" class="button">
+                      Start analyzing
+                    </button>
+                  </li>
                 </ul>
               </div>
             </form>
@@ -70,21 +118,20 @@
           <header class="major">
             <h2>Data Analysis</h2>
           </header>
-          <table id='table-analysis'>
+          <table id="table-analysis">
             <tr>
               <th style="text-align: center; padding-top: 10px;">Candidate</th>
               <th style="text-align: center">Agreement score</th>
             </tr>
           </table>
+
           <!--
           <strong class="features" id='data-analysis' style='height: 200px;'>
             
           </strong>
           -->
           <footer class="major">
-            <ul class="actions special">
-              
-            </ul>
+            <ul class="actions special"></ul>
             <a href="#cta" class="button scrolly">Learn the Algorithm</a>
           </footer>
         </section>
@@ -93,11 +140,24 @@
         <section id="cta" class="main special">
           <header class="major">
             <h2>Algorithm Explanation</h2>
-            <img src="images/classifier.png" width='80%' height='70%'>
+            <img src="images/classifier.png" width="80%" height="70%" />
             <p>
-              The classifier (multi-label) is a DNN-optimized machine learning model that we created using the Google AutoML Natural Language Processing and Google Cloud APIs. We fed the model large sets of data- sentences and phrases that each candidate has spoken in public. The data was sourced from interviews, town halls, and twitter as these sources generally contain unscripted views of the politicians, important for mitigating input bias.
-              <br/><br/>
-              Look at the graphs above. The confidence index refers to the level of confidence the model must have to assign a category to a test item. Precision and recall help us understand how well our model is capturing information, and how much it's leaving out. Precision tells us, from all the test examples that were assigned a label, how many actually were supposed to be categorized with that label. Recall tells us, from all the test examples that should have had the label assigned, how many were actually assigned the label.
+              The classifier (multi-label) is a DNN-optimized machine learning
+              model that we created using the Google AutoML Natural Language
+              Processing and Google Cloud APIs. We fed the model large sets of
+              data- sentences and phrases that each candidate has spoken in
+              public. The data was sourced from interviews, town halls, and
+              twitter as these sources generally contain unscripted views of the
+              politicians, important for mitigating input bias.
+              <br /><br />
+              Look at the graphs above. The confidence index refers to the level
+              of confidence the model must have to assign a category to a test
+              item. Precision and recall help us understand how well our model
+              is capturing information, and how much it's leaving out. Precision
+              tells us, from all the test examples that were assigned a label,
+              how many actually were supposed to be categorized with that label.
+              Recall tells us, from all the test examples that should have had
+              the label assigned, how many were actually assigned the label.
             </p>
           </header>
           <footer class="major">
@@ -114,15 +174,31 @@
           </header>
           <ul class="features">
             <li>
-              <img src="images/rohan.jpg" alt="" class='icon major style3' width='200' height='200' style='border-radius: 50%;'>
+              <img
+                src="images/rohan.jpg"
+                alt=""
+                class="icon major style3"
+                width="200"
+                height="200"
+                style="border-radius: 50%;"
+              />
               <h3>Rohan Sood</h3>
               <p>
-                Machine Learning/Natural Language Processing 
+                Machine Learning/Natural Language Processing
               </p>
-              <a href="https://www.linkedin.com/in/rohansood10/">Contact Rohan</a>
+              <a href="https://www.linkedin.com/in/rohansood10/"
+                >Contact Rohan</a
+              >
             </li>
             <li>
-              <img src="images/sam.jpg" alt="" class='icon major style3' width='200' height='200' style='border-radius: 50%;'>
+              <img
+                src="images/sam.jpg"
+                alt=""
+                class="icon major style3"
+                width="200"
+                height="200"
+                style="border-radius: 50%;"
+              />
               <h3>Sam Wight</h3>
               <p>
                 Wrote parts of the backend and helped out with the front-end.
@@ -130,7 +206,14 @@
               <a href="https://linkedin.com/in/samwightt">Contact Sam</a>
             </li>
             <li>
-              <img src="images/peter.jpg" alt="" class='icon major style3' width='200' height='200' style='border-radius: 50%;'>
+              <img
+                src="images/peter.jpg"
+                alt=""
+                class="icon major style3"
+                width="200"
+                height="200"
+                style="border-radius: 50%;"
+              />
               <h3>Peter Nguyen</h3>
               <p>
                 Front end structure and web effect design.
@@ -145,9 +228,11 @@
       <footer id="footer">
         <section>
           <h2>Copyright 2019 PoliMatch team.</h2>
-          <p>This project was developed during Cal Hacks 2019, a hackathon at UC Berkeley.</p>
-          <ul class="actions">
-          </ul>
+          <p>
+            This project was developed during Cal Hacks 2019, a hackathon at UC
+            Berkeley.
+          </p>
+          <ul class="actions"></ul>
         </section>
         <section>
           <h2>More information</h2>
@@ -176,7 +261,9 @@
               >
             </li>
             <li>
-              <a href="https://github.com/petercrackthecode/Cal-hacks-6.0" class="icon brands fa-github alt"
+              <a
+                href="https://github.com/petercrackthecode/Cal-hacks-6.0"
+                class="icon brands fa-github alt"
                 ><span class="label">GitHub</span></a
               >
             </li>
