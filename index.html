@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OkStupid</title>
+    <title>PoliMatch</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -15,11 +15,11 @@
     <div id="wrapper">
       <header id="header" class="alt">
         <span class="logo"
-          ><img src="images/magnifier.png" alt="logo" width="100" height="100"
+          ><img src="images/logo.png" alt="logo" width="100" height="100"
         /></span>
         <h1>PoliMatch</h1>
         <p>
-          Your vote, your right candidate!<br />
+          Defeating political illiteracy, one node at a time.<br />
           <button id="my-btn">
             <a
               href="#intro"
@@ -56,7 +56,7 @@
                 </header>
                 <p style='font-size: 20px; margin-top: -10px;'>Enter a statement and receive candidates' reaction</p>
                 <ul class="actions">
-                  <li><button type="submit" class="button">Start analyzing</button></li>
+                  <li style="width: 150px; height: 75px;"><button type="submit" class="button">Start analyzing</button></li>
                 </ul>
               </div>
             </form>
@@ -66,6 +66,29 @@
 
         <!-- First Section -->
         <section id="first" class="main special">
+          <header class="major">
+            <h2>Data Analysis</h2>
+          </header>
+          <table id='table-analysis'>
+            <tr>
+
+              <th>Candidate</th>
+              <th>Agreement score</th>
+            </tr>
+          </table>
+          <ul class="features" id='data-analysis'>
+            
+          </ul>
+          <footer class="major">
+            <ul class="actions special">
+              
+            </ul>
+            <a href="#second" class="button scrolly">About us</a>
+          </footer>
+        </section>
+
+        <!-- Second Section -->
+        <section id="second" class="main special">
           <header class="major">
             <h2>Magna veroeros</h2>
           </header>
@@ -95,56 +118,6 @@
               </p>
             </li>
           </ul>
-          <footer class="major">
-            <ul class="actions special">
-              <li><a href="generic.html" class="button">Learn More</a></li>
-            </ul>
-          </footer>
-        </section>
-
-        <!-- Second Section -->
-        <section id="second" class="main special">
-          <header class="major">
-            <h2>Ipsum consequat</h2>
-            <p>
-              Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-              posuere. Nulla massa urna, fermentum eget quam aliquet.
-            </p>
-          </header>
-          <ul class="statistics">
-            <li class="style1">
-              <span class="icon solid fa-code-branch"></span>
-              <strong>5,120</strong> Etiam
-            </li>
-            <li class="style2">
-              <span class="icon fa-folder-open"></span>
-              <strong>8,192</strong> Magna
-            </li>
-            <li class="style3">
-              <span class="icon solid fa-signal"></span>
-              <strong>2,048</strong> Tempus
-            </li>
-            <li class="style4">
-              <span class="icon solid fa-laptop"></span>
-              <strong>4,096</strong> Aliquam
-            </li>
-            <li class="style5">
-              <span class="icon fa-gem"></span>
-              <strong>1,024</strong> Nullam
-            </li>
-          </ul>
-          <p class="content">
-            Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu
-            arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac
-            arcu sit amet, fermentum pellentesque et purus. Integer maximus
-            varius lorem, sed convallis diam accumsan sed. Etiam porttitor
-            placerat sapien, sed eleifend a enim pulvinar faucibus semper quis
-            ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget
-            purus nec nulla mattis et accumsan ut magna libero. Morbi auctor
-            iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque.
-            Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui
-            curabitur lacinia.
-          </p>
           <footer class="major">
             <ul class="actions special">
               <li><a href="generic.html" class="button">Learn More</a></li>
@@ -239,6 +212,7 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.1/lib/darkmode-js.min.js"></script>
     <script>
       /*

@@ -26,6 +26,7 @@
 		let $analyze= $('#analyze');
 
 		const handleResults = (results) => {
+			results.forEach(item => )
 
 		}
 
