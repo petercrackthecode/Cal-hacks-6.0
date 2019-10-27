@@ -91,7 +91,7 @@
 
   $("#analyze").on("submit", function(event) {
     var accessToken =
-      "ya29.c.Kl6pBw2e3WkRT3SOEVNvv3W8yh_EEI7llbFnjLH8bVOFcQT_ezRYVYk-Tj7mVDt-BrrW9wiSnAU4yJgHUpRq5MgPsgIUbUoYEbqEajtLQgD28a5pEhwsEmOc2kD4ZQKa";
+      "ya29.c.Kl6pBzfXomVh-eB3cfyJK40zCP7_HbRP_tgCKQZn_6M8tc6clWlA1kseK6w2Da1vtNWE2cP7kZLDqO8PUygydj8TDD9LthBi5Jll1kAjjSrCp7ggt1Cde7-Gpge8C4Nj";
 
     event.preventDefault();
 
