@@ -26,8 +26,15 @@
 		let $analyze= $('#analyze');
 
 		const handleResults = (results) => {
-			results.forEach(item => )
+			const readableResults = results.map(item => item[1] * 100)
+			readableResults.forEach(item => {
+				$("#table-analysis").append("<tr><td>" + item[0] + "</td><td>" + item[1] +"</td></tr>")
+			})
 
+			d3.select("#data-analysis")
+			  .append('svg')
+			  .attr(width, '30px')
+			  .attr(height, data => data[1]);
 		}
 
 		$('#analyze').on('submit', function(event) {
